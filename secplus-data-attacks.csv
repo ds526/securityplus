@@ -1,0 +1,26 @@
+TYPE|DESCRIPTION
+DOS Attacks|Term used to describe many different types of attacks which attempt to make a computer or server's resources unavailable
+Flood Attacks|A specialized type of DoS which attempts to send more packets to a single server or host than they can handle
+Ping Flood|An attacker attempts to flood the server by sending too many ICMP echo request packages
+Smurf Attack|"Attacker sends a ping to subnet broadcast address and devices reply to spoofed IP, eating up resources"
+Fraggle Attack|"Attacker sends a UDP echo packet to port 7 (ECHO) and port 19 (CHARGEN) to flood a server with UDP packets. Flood guards, time outs, and an IPS can prevent SYN Floods"
+SYN Flood|Variant on a DoS attack where attacker initiates multiple TCP sessions but never completes the 3-way handshake
+XMAS Attack|"A specialized network scan that sets the FIN, PSH, and URG flags and can cause a device to crash or reboot"
+Ping of Death|An attack that sends an oversized and malformed packet to another computer or server
+Teardrop Attack|"Breaks apart packets into IP fragments, modifies them with overlapping and oversized payloads, sending them to a victim"
+Permanent DoS|Exploits security hole to permanently damage a networking device by reflashing its firmware
+Fork Bomb|Attack that creates a large number of processes to use up the available processing power on a machine
+Session Theft|"Attacker guesses the session ID for a web session, enabling them to takeover the already authorized session of the client"
+TCP/IP hijacking| "Occurs when an attacker takes over a TCP session between two computers without the need of a cookie or other host access"
+Blind hijacking| "An attacker blindly injects data into the communication stream without being abel to see if it is successful or not"
+Clickjacking| "Uses multiple transparent layers to trick a suer into clicking on a button or link on a page when they were intending to click on the actual page"
+Man-in-the-Middle| "Attack that causes data to flow through the attacker's computer where they can intercept or manipulate it"
+Man-in-the-Browser| "A Trojan infects a vulnerable web browser and modifies the web pages or transactions being done within the browser"
+Watering hole| "When malware is placed on a website that the attacker knows their potential victims will access"
+Replay Attack| "Network-based attack where a valid data transmission is fradulently or maliciously rebroadcast, repeated, or delayed. Prevention>>Ensure websites and other services are using tokens to uniquely identify a legitimate session"
+DNS Poisoning| "Occurs when the name resolution information is odified in the DNS server's cache"
+Unauthorized Zone Transfers|"Occurs when an attacker requests replication of the DNS information to their systems for use in planning future attacks"
+Altered Hosts Files| "Occurs when an attacker modifies the host fileto have the client bypass the DNS server and redirects them to an incorrect or malicious website"
+Pharming| "Occurs when an attacker redirects one website's traffic into a malicious website"
+Domain Name Kiting| "Attack that exploits a process in the way a domain name is registered so that the domain name is kept in limbo and cannot be registered by an authenticated buyer"
+ARP Poisoning| "Protocol for mapping an IP address to a MAC address that is recognized in the local network. Attack that exploits the IP address to MAC resolution in a network to steal, modify, or redirect frames within the local area network. Allows an attacker to essentially take over any sessions within the LAN"
