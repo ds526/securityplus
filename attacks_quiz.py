@@ -37,25 +37,26 @@ already_asked = {}
 while count < total:
     print("")
     rand_int = get_rand(lower_limit, upper_limit)
-    answer = data_list[rand_int].get('TYPE')
+    answer = data_list[rand_int].get('ANSWER')
     desc = data_list[rand_int].get('DESCRIPTION')
 
-    if dos_type not in already_asked:
-        already_asked[dos_type] = 1
+    if answer not in already_asked:
+        already_asked[answer] = 1
         print(desc)
         user_ans_service = input("What is the attack name? ")
-        if user_ans_service.lower() == dos_type.lower():
+        print("Ratio is: " + str(get_ratio(user_ans_service.lower(), answer.lower())))
+        if user_ans_service.lower() == answer.lower():
             print("Correct!")
-            print(dos_type + " -- " + desc)
+            print(answer + " -- " + desc)
             number_correct+=1
         else:
             print("Fail")
-            print(dos_type + " -- " + desc)
+            print(answer + " -- " + desc)
         count+=1
     else:
-        already_asked[dos_type]+=1
+        already_asked[answer]+=1
 
-    # if already_asked[dos_type] < 1:
+    # if already_asked[answer] < 1:
 
 print(already_asked)
 score = (number_correct / total) * 100
