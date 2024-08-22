@@ -1,9 +1,11 @@
 import csv
 import random
 import re
+from fuzzywuzzy import fuzz, process
 
 attacks_input_file = "secplus-data-attacks.csv"
 enc_input_file = "secplus-data-enc.csv"
+ports_input_file = "secplus-data.csv"
 data_list = []
 
 # Generate a random integer between 1 and 10
@@ -18,8 +20,12 @@ def gen_csv(my_csv):
             data_list.append(row)
     # return data_list
 
+def get_ratio(a,b):
+    return fuzz.ratio(a, b)
+
 gen_csv(attacks_input_file)
 gen_csv(enc_input_file)
+gen_csv(ports_input_file)
 
 upper_limit = len(data_list)
 lower_limit = 0
@@ -27,10 +33,11 @@ count = 0
 number_correct = 0
 total = 10
 already_asked = {}
+
 while count < total:
     print("")
     rand_int = get_rand(lower_limit, upper_limit)
-    dos_type = data_list[rand_int].get('TYPE')
+    answer = data_list[rand_int].get('TYPE')
     desc = data_list[rand_int].get('DESCRIPTION')
 
     if dos_type not in already_asked:
