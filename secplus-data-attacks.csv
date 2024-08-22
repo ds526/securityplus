@@ -1,4 +1,4 @@
-TYPE|DESCRIPTION
+ANSWER|QUESTION
 DOS Attacks|Term used to describe many different types of attacks which attempt to make a computer or server's resources unavailable
 Flood Attacks|A specialized type of DoS which attempts to send more packets to a single server or host than they can handle
 Ping Flood|An attacker attempts to flood the server by sending too many ICMP echo request packages
