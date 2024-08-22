@@ -17,6 +17,7 @@ def gen_csv(my_csv):
     with open(my_csv, 'r', encoding='utf-8-sig') as csvfile:
         csv_reader = csv.DictReader(csvfile, delimiter='|')
         for row in csv_reader:
+            print(row)
             data_list.append(row)
     # return data_list
 
@@ -26,6 +27,7 @@ def get_ratio(a,b):
 gen_csv(attacks_input_file)
 gen_csv(enc_input_file)
 gen_csv(ports_input_file)
+# print(data_list)
 
 upper_limit = len(data_list)
 lower_limit = 0
@@ -38,12 +40,13 @@ while count < total:
     print("")
     rand_int = get_rand(lower_limit, upper_limit)
     answer = data_list[rand_int].get('ANSWER')
-    desc = data_list[rand_int].get('DESCRIPTION')
+    desc = data_list[rand_int].get('QUESTION')
 
     if answer not in already_asked:
         already_asked[answer] = 1
         print(desc)
-        user_ans_service = input("What is the attack name? ")
+        user_ans_service = input("Answer? ")
+        # print("ANSWERRRRR>>> " + answer)
         print("Ratio is: " + str(get_ratio(user_ans_service.lower(), answer.lower())))
         if user_ans_service.lower() == answer.lower():
             print("Correct!")

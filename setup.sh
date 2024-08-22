@@ -6,4 +6,5 @@ if [ $# -eq 0 ];
     echo "usage: ./setup.sh <imagename>"
 fi
 echo $1
+docker pull $1
 docker build -t secplus.app --build-arg MY_IMAGE=$1 .
