@@ -5,4 +5,5 @@ if [ $# -eq 0 ];
     echo "No arguments supplied"
     echo "usage: ./setup.sh <imagename>"
 fi
-docker build -t secplus.app --build-arg MY_IMAGE=$1
+echo $1
+docker build -t secplus.app --build-arg MY_IMAGE=$1 .
