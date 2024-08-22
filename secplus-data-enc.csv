@@ -1,0 +1,41 @@
+ANSWER|QUESTION
+IV| Initialisation vector which is a fixed number that provides a starting value for crypto algorithms helping create random encryption keys. The IV should be large enough to not reuse the same IV and recreate the same encryption keys.
+Nonce| A number used once, e.g. IV
+XOR| If two inputs are same, it outputs false. If different, outputs true.
+Confusion| When ciphertext is different to plaintext
+Diffusion: Ensures that changing one char in plaintext will completely change the ciphertext
+Weak/deprecated algorithms| Easily cracked, and these algorithms should be deprecated.
+High resiliency| Ensure that encryption keys are not compromised via leakage
+yes| Is a block cipher symmetric?
+yes| Is a stream cipher symmetric?
+block cipher| Encrypts data as separate blocks of 64 or 128 bits. 
+stream cipher| Encrypts data as a stream of bytes rather than dividing into blocks. More efficient for encrypting data in continous stream.
+ECB (Electronic Codebook)| The simplest cipher mode. Uses the same key for all data blocks. Easy to crack because of this.
+CBC (Cipher Block Chaining)| Is used by symmetric block ciphers, and uses an IV for randomising the first block. It then combines each subsequent block with the previous one using XOR. this can make it slow, as it depends on encryption of previous blocks.
+Counter| CTR/CTM/CM, converts block cipher into stream cipher. It combines IV with a counter and uses the result to encrypt each plaintext block. Combining IV with a counter results in a different key for each block, so it is widely used.
+Galois/Counter| What is GCM? Combines counter method with Galois mode of authentication. Provides authenticity, integrity and confidentiality, and very efficient
+Symmetric encryption| Uses same key to decrypt and encrypt, also called secret key. However, these keys are changed often.
+Substitution cipher| Replaces plaintext with ciphertext using a fixed system
+Obfuscation| Security through obscurity.
+AES|Advanced encryption standard, a strong symmetric block cipher that encrypts data in 128 bits. It is fast, efficient, and strong due to being able to encrypt and decrypt in one pass, and being less resource intensive than other algorithms.
+128/192/256| What are the AES key sizes?
+yes| Is AES symmetric?
+DES| Data encryption standard. Encrypts in 64-bit blocks. Can be compromised via brute force
+64/128/192| What are the DES key sizes?
+yes| Is DES symmetric?
+3DES| Encrypts data in 3 separate passes, in 64-bit blocks. Is a suitable alternate if hardware does not support AES
+112| What are the 3DES key sizes?
+yes| Is 3DES symmetric?
+RC4| Symmetric stream cipher
+40/2048| What are the variable RC4 key sizes (from what number to what number)?
+yes| Is RC4 symmetric?
+Blowfish| Strong symmetric block cipher, encrypts in 64-bits. Faster than AES because it encrypts in smaller blocks.
+32/448| What are the blowfish key range sizes?
+yes| Is Blowfish symmetric?
+AES-256, RSA-4096, 3DES, BlowFish, TwoFish| Name 5 of the top encryption algorithms avaialble today.
+an Internet protocol used for obtaining the revocation status of an X.509 digital certificate| What is OCSP?
+a standardized digital credential system defined by the International Telecommunication Union (ITU) X.509 standard.| What is an X.509 digital certificate?
+Certificate Authority that issues digital certificates, verify applicants, and sign certificates. | What is a CA?
+Certificate Signing Request| What is a CSR?
+Certificate| What is a CRT?
+Certificate Revocation List| What is a CRL?
